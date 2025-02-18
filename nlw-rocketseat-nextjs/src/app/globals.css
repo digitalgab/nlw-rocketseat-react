@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+    --color-*: initial;
+    --color-blue: #ffff;
+    /* Insert other colors */
+
+    --font-heading: var(--font-oxanium)
+    --font-sans: var(--font-montserrat)
+
+    --radius-xl: 0.625rem;
+}
