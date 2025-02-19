@@ -4,7 +4,8 @@ interface ButtonProps extends ComponentProps<'button'> {}
 
 export function Button(props : ButtonProps) {
   return (
-    <button
+    <button 
+      className="
       flex
       justify-center
       w-full h-12 

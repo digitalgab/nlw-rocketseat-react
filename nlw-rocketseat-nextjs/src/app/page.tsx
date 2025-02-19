@@ -6,16 +6,8 @@ import { Input } from "./components/input";
 export default function Home() {
   return (
     <main>
-      <Button>
-        Enviar
-        <ArrowRight />
-      </Button>
-
-      <IconButton>
-        <Copy />
-      </IconButton>
-
-      <Input type="email" placeholder="E-mail" error/>
+      {/* TODO: Ver sobre Tailwind Play */}
+      {/* TODO: Ver sobre biomed */}
     </main>
   );
 }
