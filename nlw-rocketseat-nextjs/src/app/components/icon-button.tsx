@@ -2,7 +2,6 @@ import type { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface IconButtonProps extends ComponentProps<'button'> {}
-
 export function IconButton({ className, ...props }: IconButtonProps) {
   return (
     <button

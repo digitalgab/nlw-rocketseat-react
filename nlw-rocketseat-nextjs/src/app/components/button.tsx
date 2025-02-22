@@ -1,26 +1,17 @@
-import { ComponentProps } from "react";
+import type { ComponentProps } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-interface ButtonProps extends ComponentProps<'button'> {}
-
-export function Button(props : ButtonProps) {
-  return (
-    <button 
-      className="
-      flex
-      justify-center
-      w-full h-12 
-      px-5 
-      bg-gray-500 text-blue 
-      font-semibold 
-      rounded-xl 
-      cursor-pointer 
-      transition-colors duration-200 
-      hover:bg-blue hover:text-gray-500
-      "
-      {...props}
-    >
-      {props.children}
-    </button>
-  );
+interface ButtonProps extends ComponentProps<'button'> {
+  variant?: 'primary' | 'secondary'
 }
-
+export function Button({ className, ...props }: ButtonProps) {
+  return (
+    <button
+      className={twMerge(
+        'flex justify-between items-center px-5 h-12 bg-gray-500 text-blue font-semibold rounded-xl w-full cursor-pointer transition-colors duration-300 hover:bg-blue hover:text-gray-900',
+        className
+      )}
+      {...props}
+    />
+  )
+}

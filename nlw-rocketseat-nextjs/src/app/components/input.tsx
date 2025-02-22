@@ -20,7 +20,7 @@ export function InputRoot({
       {...props}
     />
   )
-}
+} 
 
 interface InputIconProps extends ComponentProps<'span'> {}
 
