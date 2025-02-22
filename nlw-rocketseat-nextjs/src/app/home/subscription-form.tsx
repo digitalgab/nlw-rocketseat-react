@@ -1,8 +1,8 @@
 'use client'
 
-import { Button } from '@/components/button'
-import { InputField, InputIcon, InputRoot } from '@/components/input'
-import { subscribeToEvent } from '@/http/api'
+import { Button } from '@app/components/button'
+import { InputField, InputIcon, InputRoot } from '@app/components/input'
+import { subscribeToEvent } from '@source/http/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ArrowRight, Mail, User } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'

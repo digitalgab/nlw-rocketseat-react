@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NLW Connect
 
-## Getting Started
+This project was developed based on the NLW Connect, offered for free by Rocketseat.
 
-First, run the development server:
+## Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Developed in React with Next.js, the project consists of an application for registering users on a platform, where, through their link, it is possible to invite friends, and when they sign up, their profile receives such reference for this.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project features a ranking system, classifying the top 3 users who invited the most friends, also being able to view how many users clicked on the link, how many signed up, and their position in the ranking.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- React (Next.js)
+- TypeScript
+- TailwindCSS (v4)
+- React Hook Form
+- Zod
+- BiomeJS
+- Orval
+- Lucide (for React)
