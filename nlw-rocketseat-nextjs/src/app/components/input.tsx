@@ -1,21 +1,48 @@
-// Create a componente input with Interface 
-import { ComponentProps } from "react";
-import { Mail } from 'lucide-react';
+import type { ComponentProps } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-interface InputProps extends ComponentProps<"input"> {
-    error: boolean
+interface InputRootProps extends ComponentProps<'div'> {
+  error?: boolean
 }
 
-export function Input({error = false, ...props}: InputProps) {
-    return (
-        <div className="flex flex-col gap-3">
-            <span className="text-gray-400">
-                <Mail />
-            </span>
-            <input
-                className="bg-zinc-900 py-3 px-4 rounded text-sm placeholder:text-gray-500"
-                {...props}
-            />
-        </div>
-    );
+export function InputRoot({
+  error = false,
+  className,
+  ...props
+}: InputRootProps) {
+  return (
+    <div
+      data-error={error}
+      className={twMerge(
+        'group bg-gray-800 h-12 border border-gray-600 rounded-xl px-4 flex items-center gap-2 focus-within:border-gray-100 data-[error=true]:border-danger',
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+interface InputIconProps extends ComponentProps<'span'> {}
+
+export function InputIcon({ className, ...props }: InputIconProps) {
+  return (
+    <span
+      className={twMerge(
+        'text-gray-400 group-focus-within:text-gray-100 group-[&:not(:has(input:placeholder-shown))]:text-gray-100 group-data-[error=true]:text-danger',
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+interface InputFieldProps extends ComponentProps<'input'> {}
+
+export function InputField({ className, ...props }: InputFieldProps) {
+  return (
+    <input
+      className={twMerge('flex-1 outline-0 placeholder-gray-400', className)}
+      {...props}
+    />
+  )
 }
